@@ -33,7 +33,7 @@ const Cita = sequelize.define('Citas',{
         defaultValue: true,
     },
 },{
-    tableName: 'Citas',
+    tableName: 'citas',
     timestamps: false,
 });
 

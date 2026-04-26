@@ -16,11 +16,15 @@ const Visitante = sequelize.define('Visitantes',{
     telefono: {
         type: DataTypes.STRING(20),
     },
+    fechaCreacion: {
+        type: DataTypes.DATE,
+        defaultValue: DataTypes.NOW,
+    },
     email:{
         type: DataTypes.STRING(20),
     }
 },{
-    tableName: 'Visitantes',
+    tableName: 'visitantes',
     timestamps: false,
 });
 
