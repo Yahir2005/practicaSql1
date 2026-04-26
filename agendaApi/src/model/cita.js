@@ -21,6 +21,8 @@ const Cita = sequelize.define('Citas',{
     },
     estado: {
         type: DataTypes.ENUM('programada', 'confirmada', 'completada', 'cancelada'),
+        defaultValue: 'programada',
+        allowNull: false,
     },
     fechaCreacion: {
         type: DataTypes.DATE,
