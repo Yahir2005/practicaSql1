@@ -1,9 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var router = express.Router();
-var vistaController = require('../controller/visitanteController');
-
-
+var citaController = require('../src/controller/citaController.js');
 
 router.get('/', citaController.getAll);
 router.get('/:id', citaController.getById);

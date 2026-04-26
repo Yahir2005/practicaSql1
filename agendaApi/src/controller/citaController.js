@@ -1,4 +1,4 @@
-const {Cita} = require('../model');
+const Cita = require('../model/cita');
 
 const getAll = async (req,res)=>{
     try {
@@ -13,6 +13,7 @@ const getById= async(req,res)=>{
     try {
         const cita = await Cita.findByPk(req.params.id);
         if(!cita) return res.status(404).json({error:'Cita no encontrada'});
+        res.json(cita);
     } catch (error) {
         res.status(500).json({error: error.message});
     }

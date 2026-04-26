@@ -1,4 +1,4 @@
-const {Visitante} = require('../model');
+const Visitante = require('../model/visitante');
 
 const getAll = async (req,res)=>{
     try {
@@ -13,6 +13,7 @@ const getById= async(req,res)=>{
     try {
         const visitante = await Visitante.findByPk(req.params.id);
         if(!visitante) return res.status(404).json({error:'Visitante no encontrado'});
+        res.json(visitante);
     } catch (error) {
         res.status(500).json({error: error.message});
     }
