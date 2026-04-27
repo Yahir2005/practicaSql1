@@ -1,4 +1,4 @@
-const Visitante = require('../model');
+const Visitante = require('../model/visitante');
 
 const getAll = async (req,res)=>{
     try {

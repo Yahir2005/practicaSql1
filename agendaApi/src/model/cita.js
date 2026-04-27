@@ -16,7 +16,7 @@ const Cita = sequelize.define('Citas',{
     motivo: {
         type: DataTypes.STRING(255),
     },
-    obserbvaciones: {
+    observaciones: {
         type: DataTypes.STRING(255),
     },
     estado: {
