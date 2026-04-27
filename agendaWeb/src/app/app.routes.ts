@@ -13,5 +13,15 @@ export const routes: Routes = [
     {
         path: 'citas',
         loadChildren: () => import('./features/citas/cita.component').then(m => m.CitaComponent)
+    },
+    {
+        path: 'visitantes',
+        loadChildren: () => import('./features/visitantes/visitante.component').then(m => m.VisitanteComponent)
+    },
+    {
+        path: '**',
+        redirectTo: '/home'
     }
+
+
 ];
