@@ -4,7 +4,7 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var cors = require('cors');
-var { sequelize } = require('./src/model/');
+var { sequelize } = require('./src/model');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -28,6 +28,10 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/api/visitantes', visitanteRouter);
 app.use('/api/citas', citaRouter);
+
+sequelize.authenticate()
+  .then(() => console.log('Database connected successfully.'))
+  .catch((err) => console.error('Unable to connect to the database:', err));
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
