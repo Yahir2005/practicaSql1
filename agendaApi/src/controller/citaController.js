@@ -1,4 +1,4 @@
-const Cita = require('../model/cita');
+const Cita = require('../model');
 
 const getAll = async (req,res)=>{
     try {
